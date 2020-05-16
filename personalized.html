@@ -1,0 +1,95 @@
+<html>
+    <head>
+
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='new_style.css')}}">
+      <title>User details</title>
+
+  </head>
+
+
+    <body>
+        <h1><span><span class="pink">Details of user:   {{ current_user_details[14] }} {{ current_user_details[15] }}</pan></h1>
+        	<table class = "container">
+
+        	    <thead>
+            		<tr>
+            			<th><h1>Parameters</h1></th>
+            			<th><h1>Values</h1></th>
+            		</tr>
+            	</thead>
+
+        		<tbody>
+        		    <tr >
+        		        <td>Username</td>
+        		        <td>{{ current_user_details[0] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td>Password</td>
+        		        <td>{{ current_user_details[1] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td>Headache Name</td>
+        		        <td>{{ current_user_details[2] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td>Gender</td>
+        		        <td>{{ current_user_details[17] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td>Email</td>
+        		        <td>{{ current_user_details[12] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td>First Name</td>
+        		        <td>{{ current_user_details[14] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td>Last Name</td>
+        		        <td>{{ current_user_details[15] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td>Phone</td>
+        		        <td>{{ current_user_details[13] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td>Did the user wake up from this headache or not?</td>
+        		        <td>{{ current_user_details[3] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td>Duration of headache</td>
+        		        <td>{{ current_user_details[4] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td>How severe the headache was?</td>
+        		        <td>{{ current_user_details[5] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td> How many times it happened since you woke up? </td>
+        		        <td>{{ current_user_details[6] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td>Was the physician a USC facility</td>
+        		        <td>{{ current_user_details[8] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td>What medicine the user took?</td>
+        		        <td>{{ current_user_details[9] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td>How many pills?</td>
+        		        <td>{{ current_user_details[10] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td>How severe the headache was prior to medication</td>
+        		        <td>{{ current_user_details[11] }}</td>
+        		    </tr>
+        		    <tr>
+        		        <td>Secondary Email</td>
+        		        <td>{{ current_user_details[16] }}</td>
+        		    </tr>
+        		</tbody>
+
+        </table>
+
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+
+    <head>
+
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+      <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+      <title>{{ title }}</title>
+
+  </head>
+
+
+    <body>
+            <form action="/displayuser" class = "main">
+                <p class="sign" align="center">{{ title }}</p>
+                   {% for member in members: %}
+	           <input type="radio" name="patients" value="{{ member }}" /> {{ member }} <br>
+    	           {% endfor %}
+	 <p>         </p>
+                 <input class="submit" type="submit" align="center" value="Display User">
+            </form>
+
+
+
+
+            <form action="/suspend" class = "main">
+                <p class="sign" align="center">Select if you want to suspend a user's account!</p>
+                   {% for member in members: %}
+	           <input type="radio" name="suspend_user" value="{{ member }}" /> {{ member }} <br>
+    	           {% endfor %}
+	 <p>         </p>
+                 <input class="submit" type="submit" align="center" value="Suspend a user?">
+            </form>
+
+
+
+            <form action="/makeadmin" class = "main">
+                <p class="sign" align="center">Select if you want to assign administrator privileges to a user</p>
+                   {% for member in members: %}
+	           <input type="radio" name="make_user_admin" value="{{ member }}" /> {{ member }} <br>
+    	           {% endfor %}
+	 <p>         </p>
+                 <input class="submit" type="submit" align="center" value="Make admin!">
+            </form>
+
+
+
+            <form action="/revokeadmin" class = "main">
+                <p class="sign" align="center">Select if you want to revoke administrator privileges from a user</p>
+                   {% for member in members: %}
+	           <input type="radio" name="revoke_user_admin" value="{{ member }}" /> {{ member }} <br>
+    	           {% endfor %}
+	 <p>         </p>
+                 <input class="submit" type="submit" align="center" value="Revoke admin privileges!">
+            </form>
+
+
+
+
+    </body>
+</html>
